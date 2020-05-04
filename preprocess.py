@@ -10,9 +10,9 @@ def preprocess(config):
                 if "type" in config[model]["preprocess"][name]:
                     pp_type = config[model]["preprocess"][name]["type"]
                 if pp_type == "shell" and pp_method:
-                    try:
-                        os.command(pp_method)
-                    except:
-                        print("Shell execution of command: '" + pp_method + "' failed, please check...")
+                    #try:
+                    os.system(pp_method)
+                    #except:
+                    #    print("Shell execution of command: '" + pp_method + "' failed, please check...")
     return config
                 
