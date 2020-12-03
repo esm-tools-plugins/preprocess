@@ -1,6 +1,9 @@
 import os
 
 def preprocess(config):
+    """
+    Runs a preprocessing shell script
+    """
     pp_method = pp_type = None
     for model in config["general"]["valid_model_names"]:
         if "preprocess" in config[model]:
